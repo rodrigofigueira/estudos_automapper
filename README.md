@@ -2,6 +2,6 @@
 Projeto API para estudos do AutoMapper
 
 ## Próximos Passos
-- Criar um método extension para calcular idade
-- Aprender um ponto da configuração e anotar aqui
-- Aprender uma forma mais elegante de onde colocar o mapeamento
+- [ ] Criar um método extension para calcular idade
+- [ ] Aprender um ponto da configuração e anotar aqui
+- [ ] Aprender uma forma mais elegante de onde colocar o mapeamento
