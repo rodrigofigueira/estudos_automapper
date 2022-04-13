@@ -1,6 +1,6 @@
 using AutoMapper;
-using estudos_automapper;
 using estudos_automapper.Models;
+using estudos_automapper.Extensions;
 using estudos_automapper.ViewModel;
 
 // Início da configuração
@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 var config = new MapperConfiguration(cfg => {
                                         cfg.CreateMap<Usuario, UsuarioViewModel>()
                                         .ForMember(uv => uv.Idade,
-                                            m => m.MapFrom(a => CalcularIdade.Calcular(a.DataNascimento))
+                                            m => m.MapFrom(a => a.DataNascimento.CalcularIdade())
                                         );
                                     });
             

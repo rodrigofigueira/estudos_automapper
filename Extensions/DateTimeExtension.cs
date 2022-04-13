@@ -1,9 +1,8 @@
-namespace estudos_automapper
+namespace estudos_automapper.Extensions
 {
-    public static class CalcularIdade
+    public static class DateTimeExtension
     {
-
-        public static int Calcular(DateTime dataNascimento){
+        public static int CalcularIdade(this DateTime dataNascimento){
             
             int idade = DateTime.Now.Year - dataNascimento.Year;
 
@@ -14,6 +13,5 @@ namespace estudos_automapper
             return idade;
 
         }
-
     }
 }
