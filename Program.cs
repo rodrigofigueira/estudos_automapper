@@ -1,23 +1,16 @@
 using AutoMapper;
+using AutoMapper.Configuration;
 using estudos_automapper.Models;
 using estudos_automapper.Extensions;
 using estudos_automapper.ViewModel;
+using estudos_automapper.AutoMapper;
 
 // Início da configuração
 var builder = WebApplication.CreateBuilder(args);
 
-var config = new MapperConfiguration(cfg => {
-                                        cfg.CreateMap<Usuario, UsuarioViewModel>()
-                                        .ForMember(uv => uv.Idade,
-                                            m => m.MapFrom(a => a.DataNascimento.CalcularIdade())
-                                        );
-                                    });
-            
-IMapper mapper = config.CreateMapper();
-//fim da configuração
-
-// injetando o objeto.
-builder.Services.AddSingleton(mapper);
+// injeção do automapper
+// classes que herdam profile são injetadas
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddControllers();
 
