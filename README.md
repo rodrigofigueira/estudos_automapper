@@ -14,3 +14,4 @@ Projeto API para estudos do AutoMapper
 - [x] Aprender uma forma mais organizada para configurar o mapeamento
 - [ ] Reorganizar o projeto, renomear a classe automappersetup
 - [ ] Configurar abrir o swagger ao rodar a API
+- [ ] Estudar sobre Projection (https://docs.automapper.org/en/latest/Projection.html)
