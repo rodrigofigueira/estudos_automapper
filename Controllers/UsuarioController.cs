@@ -18,10 +18,18 @@ public class UsuarioController : ControllerBase
     }
 
     [HttpPost]
+    [Route("padrao")]
     public ActionResult<UsuarioViewModel> Post(Usuario usuario)
     {
         var usuarioViewModel = _mapper.Map<UsuarioViewModel>(usuario);
         return Ok(usuarioViewModel);
+    }
+
+    [HttpPost]
+    [Route("convensao_nomes_diferentes")]
+    public ActionResult<ConvensaoNomeDestino> ConvensaoNomes(ConvensaoNomeOrigem convensaoOrigem){
+        ConvensaoNomeDestino convensaoDestino = _mapper.Map<ConvensaoNomeDestino>(convensaoOrigem);
+        return Ok(convensaoDestino);
     }
 
 }

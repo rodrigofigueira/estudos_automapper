@@ -1,15 +1,8 @@
-using AutoMapper;
-using AutoMapper.Configuration;
-using estudos_automapper.Models;
-using estudos_automapper.Extensions;
-using estudos_automapper.ViewModel;
-using estudos_automapper.AutoMapper;
-
 // Início da configuração
 var builder = WebApplication.CreateBuilder(args);
 
 // injeção do automapper
-// classes que herdam profile são injetadas
+// AutoMapper scanneia o assembly passado e adiciona classes que herdam Profile
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddControllers();
